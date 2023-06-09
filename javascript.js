@@ -25,8 +25,6 @@ function playRound(playerSelection, computerSelection) {
     // player wins: paper beats rock, rock beats scissors, scissors beats paper
     // else the player loses
     if (playerSelection === computerSelection) {
-        playerScore += 1;
-        computerScore += 1;
         return `You Tied! ${playerSelection} (You) ties with ${computerSelection} (Computer)`;
     } else if ((playerSelection === "Paper" && computerSelection === "Rock") ||
     (playerSelection === "Rock" && computerSelection === "Scissors") ||
