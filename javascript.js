@@ -44,30 +44,46 @@ function fixCase(playerSelection) {
     return firstLetter + restOfString;
 }
 
-// function to play a 5-round game
-// inputs: num of rounds in the game
-// outputs: the winner and game score
-// call another function to keep score (global), report a winner or loser at the end
-function game(num) {
-    for(let i = 1; i <= num; i++) {
-        let playerChoice = prompt('Please enter "Rock", "Paper", or "Scissors"');
-        console.log(`Round ${roundNum}`);
-        console.log(playRound(playerChoice, getComputerChoice()));
-        roundNum += 1;
-    }
-    score();
-}
-
 function score() {
     if (playerScore === computerScore) {
-        console.log("You tied!");
+        return "You tied!";
     } else if (playerScore > computerScore) {
-        console.log("You are the winner!");
+        return "You are the winner!";
     } else {
-        console.log("Computer is the winner!");
+        return "Computer is the winner!";
     }
-    console.log(`You: ${playerScore}, Computer: ${computerScore}`);
 }
 
-// call the function to play a 5-round game
-game(5);
+let buttons = document.querySelectorAll('button');
+
+// turn the function into a named function
+// remove the event listener at round 5 and update the winner
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        if (roundNum === 5) {
+            let displayWinner = document.querySelector('#winner');
+            displayWinner.textContent = score();
+            console.log("test");
+        }
+
+        let playerChoice = button.id;
+        let computerChoice = getComputerChoice();
+
+        // display game round
+        let displayGameRound = document.querySelector('#gameRound');
+        displayGameRound.textContent = `Round #${roundNum}`;
+
+        // displays result
+        let displayResult = document.querySelector('#result');
+        displayResult.textContent = playRound(playerChoice, computerChoice);
+
+        // displays score
+        let displayPlayerScore = document.querySelector('#pScore');
+        displayPlayerScore.textContent = `You: ${playerScore}`;
+
+        let displayComputerScore = document.querySelector('#cScore');
+        displayComputerScore.textContent = `Computer: ${computerScore}`;
+
+        roundNum += 1;
+    });
+})
