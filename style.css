@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Roboto:ital,wght@0,400;0,500;1,300&display=swap');
+* {
+    font-family: "Comic Neue";
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh;
+}
+
+/* stretch background color */
+.container,
+.hero,
+.footer {
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* hero (header + intro) */
+.hero,
+.footer {
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+/* winner, final emoji, final emoji box */
+#winner,
+#finalEmoji {
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+
+.final-emoji-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+
+/* score */
+.score-box {
+    display: flex;
+    gap: 100px;
+}
+
+.score-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+/* choice buttons */
+.choice-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+/* results */
+.results-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* unordered list */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: -20px;
+}
+
+/* links */
+a, 
+a:visited {
+    color: #d62b54;
+    text-decoration: none;
+}
+
+/* buttons */
+.linkButton,
+.choiceButton {
+    border: none;
+}
+
+.linkButton {
+    background-color: #3882F6;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.choiceButton {
+    background-color: transparent;
+    filter: grayscale(100%);
+}
+
+.choiceButton:hover {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+    transition: 0.07s;
+    cursor: pointer;
+}
+
+/* images */
+.bothChoice {
+    height: 110px;
+    width: 100px;
+}
+
+.miniIcons {
+    height: 20px;
+    width: 20px;
+}
+
+/* results (scrollbar box) */
+#gameResult {
+    height: 55px;
+    width: 400px;
+    overflow: auto;
+}

@@ -5,23 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <link href="Images/janken_choki.png" rel="icon">
     <script src="javascript.js" defer></script>
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Game Round -->
-    <div id="gameRound"></div>
-    <div id="winner"></div>
+    <!-- Game Round Details -->
+    <div class="container">
+        <div class="hero">
+            <h1 id="gameRound">Rock Paper Scissors (RPS)</h1>
+            <ul id="remove">
+                <li>The winner is the first to win 5 rounds</li>
+                <li><img class="miniIcons" src="Images/janken_gu.png"> Beats <img class="miniIcons" src="Images/janken_choki.png"></li>
+                <li><img class="miniIcons" src="Images/janken_choki.png"> Beats <img class="miniIcons" src="Images/janken_pa.png"></li>
+                <li><img class="miniIcons" src="Images/janken_pa.png"> Beats <img class="miniIcons" src="Images/janken_gu.png"></li>
+            </ul>
 
-    <!-- Score -->
-    <div id="pScore"></div>
-    <div id="cScore"></div>
+            <!-- Winner Text -->
+            <div class="final-emoji-box">
+                <img class="miniIcons" id="finalEmoji" src="" style="visibility: hidden;"><div id="winner"></div>
+            </div>
+        </div>
 
-    <!-- Selection Buttons -->
-    <button id="rock">✊</button>
-    <button id="paper">🖐</button>
-    <button id="scissors">✌</button>
+        <br>
+        <div class="score-box">
+            <!-- Score -->
+            <div class="score-item">
+                <div><img id="playerImg" class="bothChoice" src="Images/aisatsu_kodomo_zenshin_girl.png" style="transform: scaleX(-1)"></div>
+                <div id="pScore">You: 0</div>
+            </div>
+            <div class="score-item">
+                <div><img id="compImg" class="bothChoice" src="Images/aisatsu_kodomo_zenshin_boy.png"></div>
+                <div id="cScore">Computer: 0</div>
+            </div>
+        </div>
 
-    <!-- console.log stuff goes here -->
-    <div id="result"></div>
+        <br><br>
+
+        <!-- Choice Buttons -->
+        <div class="choice-buttons">
+            <button id="Rock" class="choiceButton"><img class="bothChoice" src="Images/janken_gu.png"></button>
+            <button id="Paper" class="choiceButton"><img class="bothChoice" src="Images/janken_pa.png"></button>
+            <button id="Scissors" class="choiceButton"><img class="bothChoice" src="Images/janken_choki.png"></button>
+        </div>
+
+        <br>
+
+        <div class="results-box">
+            <div id="gameResult"></div>
+            <br>
+            <div id="gameComplete"></div>
+        </div>
+
+    </div>
+    <div class="footer">Copyright &copy;&nbsp;<a link href="https://github.com/ilindaa">Linda</a>&nbsp;2023 | Illustrations &copy;&nbsp;<a link href="https://www.irasutoya.com/">Irasutoya</a></div>
 </body>
 </html>
