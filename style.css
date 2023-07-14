@@ -4,6 +4,7 @@
 }
 
 body {
+    background-color: white;
     margin: 0;
     padding: 0;
     min-height: 100vh;
@@ -19,7 +20,7 @@ body {
     min-height: 10vh;
 }
 
-/* stretch background color */
+/* Stretch background color */
 .container,
 .hero,
 .footer {
@@ -33,18 +34,17 @@ body {
     align-items: center;
 }
 
-/* hero (header + intro) */
+/* Hero (header + intro) */
 .hero,
 .footer {
     text-align: center;
-    background-color: whitesmoke;
 }
 
-/* winner, final emoji, final emoji box */
+/* Winner, final emoji, final emoji box */
 #winner,
 #finalEmoji {
     font-weight: bold;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
 }
 
 .final-emoji-box {
@@ -55,7 +55,7 @@ body {
 }
 
 
-/* score */
+/* Score */
 .score-box {
     display: flex;
     gap: 100px;
@@ -69,14 +69,20 @@ body {
     font-weight: bold;
 }
 
-/* choice buttons */
+/* Top/bottom margins for the choice buttons and the game over, play button */
+.choice-buttons,
+#gameComplete {
+    margin: 1.25rem 0rem;
+}
+
+/* Choice buttons */
 .choice-buttons {
     display: flex;
     justify-content: space-between;
     gap: 50px;
 }
 
-/* results */
+/* Results */
 .results-box {
     display: flex;
     flex-direction: column;
@@ -84,22 +90,32 @@ body {
     align-items: center;
 }
 
-/* unordered list */
+/* Instructions, Unordered list */
+#instructions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 ul {
+    display: flex;
     list-style-type: none;
     padding: 0;
     margin: 0;
     margin-bottom: -20px;
 }
 
-/* links */
+li {
+    padding-left: 2rem;
+}
+
+/* Links */
 a, 
 a:visited {
     color: #d62b54;
-    text-decoration: none;
 }
 
-/* buttons */
+/* Buttons */
 .linkButton,
 .choiceButton {
     border: none;
@@ -112,6 +128,7 @@ a:visited {
     border-radius: 5px;
     padding: 5px;
     font-size: 16px;
+    cursor: pointer;
 }
 
 .choiceButton {
@@ -126,10 +143,18 @@ a:visited {
     cursor: pointer;
 }
 
-/* images */
+/* Images */
+.bothStart,
+.bothChoice {
+    width: 110px;
+}
+
+.bothStart {
+    height: 130px;
+}
+
 .bothChoice {
     height: 110px;
-    width: 100px;
 }
 
 .miniIcons {
@@ -137,7 +162,7 @@ a:visited {
     width: 20px;
 }
 
-/* results (scrollbar box) */
+/* Results (scrollbar box) */
 #gameResult {
     height: 55px;
     width: 400px;
