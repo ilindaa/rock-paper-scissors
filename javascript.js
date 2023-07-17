@@ -81,6 +81,7 @@ function displayRound() {
 function displayResult(playerChoice, computerChoice) {
     let displayResult = document.getElementById('gameResult');
     displayResult.innerText += `#${roundNum}: ${playRound(playerChoice, computerChoice)}\n`;
+    displayResult.scrollTop = displayResult.scrollHeight;
 
     if (playerChoice === "Rock") {
         document.getElementById('playerImg').src = 'Images/janken_gu.png';
